@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="71dp"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/makesureto"
+        android:layout_alignParentStart="true">
+        <EditText android:id="@+id/edit_message"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_message"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:id="@+id/send_button"
+            android:onClick="buttonClick"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/changing_text"
+        android:id="@+id/myTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Set IP Address:"
+        android:id="@+id/makesureto"
+        android:layout_marginTop="59dp"
+        android:layout_below="@+id/myTextView"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Set Light Color:"
+        android:id="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yellow_button"
+        android:id="@+id/yellowbutton"
+        android:layout_below="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_marginTop="37dp"
+        android:onClick="setYellow"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orange_button"
+        android:id="@+id/orangebutton"
+        android:layout_alignTop="@+id/yellowbutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="setOrange"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pink_button"
+        android:id="@+id/redbutton"
+        android:layout_alignTop="@+id/orangebutton"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:onClick="setRed"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blue_button"
+        android:id="@+id/bluebutton"
+        android:layout_below="@+id/yellowbutton"
+        android:layout_centerHorizontal="true"
+        android:onClick="setBlue"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teal_button"
+        android:id="@+id/greenbutton"
+        android:layout_below="@+id/orangebutton"
+        android:layout_alignParentStart="true"
+        android:onClick="setGreen"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purple_button"
+        android:id="@+id/purplebutton"
+        android:layout_alignBottom="@+id/bluebutton"
+        android:layout_alignParentEnd="true"
+        android:onClick="setPurple"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout><!-- From: file:/Users/meganjoyner/AndroidStudioProjects/AndroidTwitterAPI1/app/src/main/res/layout/activity_app2.xml -->

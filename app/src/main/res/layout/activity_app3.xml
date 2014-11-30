@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/btSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="speak"
+        android:padding="12dp"
+        android:text="@string/btSpeak"
+        tools:context=".App3Activity"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Said:"
+        android:textStyle="bold"
+        android:id="@+id/youSaid"
+        android:layout_below="@+id/btSpeak"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" "
+        android:id="@+id/whatdidisay"
+        android:layout_below="@+id/youSaid"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0000"
+        android:id="@+id/binarynumber"
+        android:layout_below="@+id/whatdidisay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="212dp"
+        android:gravity="center_horizontal"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Binary Representation"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/binarynumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:textColor="#FFFFFF"/>
+
+</RelativeLayout>

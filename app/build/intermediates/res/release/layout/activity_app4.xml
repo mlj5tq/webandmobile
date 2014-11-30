@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/btSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="speak"
+        android:padding="12dp"
+        android:text="@string/btSpeak"
+        tools:context=".App3Activity"
+        android:layout_marginTop="152dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You Said:"
+        android:textStyle="bold"
+        android:id="@+id/youSaid"
+        android:layout_below="@+id/btSpeak"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" "
+        android:id="@+id/whatdidisay"
+        android:layout_below="@+id/youSaid"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0000"
+        android:id="@+id/binarynumber"
+        android:gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Binary Representation"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/binarynumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="37dp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="What Number Is This?"
+        android:id="@+id/whatnumber"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:id="@+id/correctorincorrect"
+        android:layout_below="@+id/binarynumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="144dp"
+        android:textColor="#FFFFFF"/>
+
+
+</RelativeLayout><!-- From: file:/Users/meganjoyner/AndroidStudioProjects/AndroidTwitterAPI1/app/src/main/res/layout/activity_app4.xml -->

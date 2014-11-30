@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/meganjoyner/AndroidStudioProjects/AndroidTwitterAPI1/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <!-- From: file:/Users/meganjoyner/AndroidStudioProjects/AndroidTwitterAPI1/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/Users/meganjoyner/AndroidStudioProjects/AndroidTwitterAPI1/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">AndroidTwitterAPI</string>
+    <string name="blue_button">Blue</string>
+    <string name="btSpeak">Say A Number</string>
+    <string name="button_send">Set</string>
+    <string name="changing_text">Set Your Preferences:</string>
+    <string name="edit_message">IP address</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="orange_button">Orange</string>
+    <string name="pink_button">Pink</string>
+    <string name="purple_button">Purple</string>
+    <string name="sNoOfMatches">No of Matches</string>
+    <string name="teal_button">Teal</string>
+    <string name="title_activity_voice_recognition">Voice Recognition</string>
+    <string name="tvTextMatches">Text Matches</string>
+    <string name="yellow_button">Yellow</string>
+    <!-- From: file:/Users/meganjoyner/AndroidStudioProjects/AndroidTwitterAPI1/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>
