@@ -42,8 +42,19 @@ public class ProfileFragment extends Fragment {
     ProgressDialog progress;
     Dialog tDialog;
     String tweetText;
+    private String strtext = "";
+
+
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle args) {
+        System.out.println(strtext);
+        Bundle b = getArguments();
+        if(b != null){
+            strtext = getArguments().getString("score");
+            System.out.println(strtext);
+
+        }
+
         View view = inflater.inflate(R.layout.profile_fragment, container, false);
         prof_name = (TextView)view.findViewById(R.id.prof_name);
         pref = getActivity().getPreferences(0);
@@ -52,6 +63,9 @@ public class ProfileFragment extends Fragment {
         signout = (ImageView)view.findViewById(R.id.signout);
         signout.setOnClickListener(new SignOut());
         tweet.setOnClickListener(new Tweet());
+
+
+
         new LoadProfile().execute();
         return view;
     }
@@ -84,6 +98,9 @@ public class ProfileFragment extends Fragment {
 			tDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 			tDialog.setContentView(R.layout.tweet_dialog);
 			tweet_text = (EditText)tDialog.findViewById(R.id.tweet_text);
+            if(strtext != ""){
+                tweet_text.setText("I got "+strtext+"% correct on @BinaryTeacher !");
+            }
 			post_tweet = (ImageView)tDialog.findViewById(R.id.post_tweet);
 			post_tweet.setOnClickListener(new View.OnClickListener() {
 				
@@ -95,6 +112,7 @@ public class ProfileFragment extends Fragment {
 			});
 			
 			tDialog.show();
+
 			
 			
 		}}
@@ -123,6 +141,7 @@ public class ProfileFragment extends Fragment {
 	            Twitter twitter = new TwitterFactory(builder.build()).getInstance(accessToken);
 	             
 	            try {
+
 					twitter4j.Status response = twitter.updateStatus(tweetText +" #WebAndMobile #cs4720 ");
 					return response.toString();
 				} catch (TwitterException e) {

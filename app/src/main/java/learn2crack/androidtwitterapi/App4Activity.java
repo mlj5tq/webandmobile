@@ -147,6 +147,8 @@ public class App4Activity extends Activity {
                         coi.setText("CORRECT!");
                         score = score + 10;
                         guessed = true;
+                        mbtSpeak.setEnabled(false);
+
 
 
                             sendJson(light(ranNum, "\"red\":0, \"blue\":0, \"green\":255"), false);
@@ -155,6 +157,8 @@ public class App4Activity extends Activity {
                         coi.setText("INCORRECT!");
                         sendJson(light(ranNum, "\"red\":255, \"blue\":0, \"green\":0"), false);
                         guessed = true;
+                        mbtSpeak.setEnabled(false);
+
 
 
                     }
@@ -164,7 +168,7 @@ public class App4Activity extends Activity {
                 {
                     //Print "This is not an integer"
                     //when user put other than integer
-                    what.setText("Please Say A Number!");
+                    coi.setText("Please Say A Number!");
                 }
                 if (!textMatchList.isEmpty()) {
                     // If first Match contains the 'search' word
@@ -311,6 +315,9 @@ public class App4Activity extends Activity {
     public void next(View view){
         if (guessed = true) {
             qn++;
+            mbtSpeak.setEnabled(true);
+            guessed = false;
+
             if (qn == 11) {
                 mlvTextMatches.setVisibility(view.INVISIBLE);
                 mbtSpeak.setVisibility(view.INVISIBLE);
@@ -343,7 +350,7 @@ public class App4Activity extends Activity {
                 binaryhandler.sendEmptyMessage(0);
 
                 mlvTextMatches.setText("You said:");
-                coi.setText("You are: ");
+                coi.setText(" ");
                 sendJson(light(ranNum, lightcolor), false);
 
             }
@@ -356,6 +363,7 @@ public class App4Activity extends Activity {
 
     public void tweet(View view){
         Intent i = new Intent(this, MainActivity.class);
+        i.putExtra("score", Integer.toString(score));
         startActivity(i);
     }
 

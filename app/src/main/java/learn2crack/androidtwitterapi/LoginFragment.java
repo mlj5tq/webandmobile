@@ -38,10 +38,14 @@ public class LoginFragment extends Fragment {
     SharedPreferences pref;
     ProgressDialog progress;
     Bitmap bitmap;
+    private String strtext;
     
    @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.login_fragment, container, false);
+
+        strtext = getArguments().getString("score");
+
+       View view = inflater.inflate(R.layout.login_fragment, container, false);
         login = (ImageView)view.findViewById(R.id.login);
          pref = getActivity().getPreferences(0);
  		twitter = new TwitterFactory().getInstance();
@@ -172,6 +176,12 @@ public class LoginFragment extends Fragment {
 	        	if(response){
 	                  progress.hide();
 	        		  Fragment profile = new ProfileFragment();
+
+                      if(strtext != null){
+                          Bundle bundle = new Bundle();
+                          bundle.putString("score", strtext);
+                          profile.setArguments(bundle);
+                      }
 	                  FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();	              
 	                  ft.replace(R.id.content_frame, profile);
 	                  ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);

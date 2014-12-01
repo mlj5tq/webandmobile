@@ -64,7 +64,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="You are:"
+        android:text=" "
         android:id="@+id/correctorincorrect"
         android:layout_marginTop="150dp"
         android:textColor="#FFFFFF"

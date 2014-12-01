@@ -10,7 +10,7 @@
         android:textAlignment="center"
         android:text="Learning binary with @BinaryTeacher !!"
         android:id="@+id/tweet_text"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"/>
 
     <ImageView
         android:layout_width="400px"
