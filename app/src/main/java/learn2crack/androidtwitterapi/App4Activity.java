@@ -313,7 +313,7 @@ public class App4Activity extends Activity {
     };
 
     public void next(View view){
-        if (guessed = true) {
+        if (guessed == true) {
             qn++;
             mbtSpeak.setEnabled(true);
             guessed = false;
